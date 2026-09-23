@@ -305,17 +305,24 @@ section { position: relative; }
 }
 
 .scroll-cue {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.scroll-cue--hero {
   position: absolute;
   z-index: 3;
   left: 50%;
   bottom: 32px;
   transform: translateX(-50%);
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
-  color: var(--text-secondary);
-  text-decoration: none;
+}
+
+.scroll-cue--after-nav {
+  display: none;
 }
 
 .scroll-cue__label {
@@ -856,20 +863,63 @@ section { position: relative; }
   .hero__showcase { position: relative; inset: auto; }
   .hero__showcase-img { height: auto; object-fit: initial; }
   .hero__showcase::after { height: 70px; }
-  .scroll-cue { bottom: 18px; }
+  .scroll-cue--hero { display: none; }
+  .scroll-cue--after-nav {
+    display: flex;
+    width: fit-content;
+    margin: 28px auto 0;
+    padding: 8px 18px 8px 8px;
+    gap: 10px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+  }
 
   .quick-nav {
     position: relative;
     z-index: 2;
     margin-top: -32px;
-    padding: 24px 0 80px;
+    padding: 24px 0 60px;
   }
-  .quick-nav__bar { flex-direction: column; }
+  .quick-nav__bar {
+    flex-direction: column;
+    gap: 12px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+  }
   .quick-nav-item {
     border-right: none;
-    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 22px 20px;
+    transition: opacity 0.7s var(--ease), transform 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
   }
-  .quick-nav-item:last-child { border-bottom: none; }
+  .quick-nav-item:active {
+    transform: scale(0.97);
+    background: rgba(59, 130, 246, 0.08);
+    border-color: rgba(59, 130, 246, 0.35);
+  }
+  .quick-nav-item__icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+  }
+  .quick-nav-item__arrow {
+    opacity: 1;
+    transform: none;
+  }
+  .quick-nav-item:nth-child(1) { transition-delay: 0s; }
+  .quick-nav-item:nth-child(2) { transition-delay: 0.08s; }
+  .quick-nav-item:nth-child(3) { transition-delay: 0.16s; }
+  .quick-nav-item:nth-child(4) { transition-delay: 0.24s; }
 
   .about { padding: 20px 0 90px; }
   .portfolio { padding: 10px 0 90px; }
