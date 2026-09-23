@@ -852,12 +852,15 @@ section { position: relative; }
   .menu-toggle { display: flex; }
   .mobile-menu { display: block; }
 
+<<<<<<< HEAD
   .hero { min-height: 0; }
   .hero__showcase { position: relative; inset: auto; }
   .hero__showcase-img { height: auto; object-fit: initial; }
   .hero__showcase::after { height: 70px; }
   .scroll-cue { bottom: 18px; }
 
+=======
+>>>>>>> fd1532c0df9ddbb8b701c2f16e35a1a829e2ea97
   .quick-nav { padding: 40px 0 80px; }
   .quick-nav__bar { flex-direction: column; }
   .quick-nav-item {
