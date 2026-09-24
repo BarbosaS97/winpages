@@ -72,15 +72,22 @@
       <h1 class="sr-only">WinPages — sites modernos, rápidos e responsivos que transformam ideias em presença digital.</h1>
 
       <div class="hero__showcase reveal">
-        <img
+        <video
           class="hero__showcase-img"
-          src="assets/img/hero-bg.jpg"
-          alt="Mockup do site institucional da WinPages exibido em um notebook, em um ambiente de trabalho moderno à noite."
           width="1672"
           height="941"
-          loading="eager"
-          fetchpriority="high"
+          autoplay
+          muted
+          loop
+          playsinline
+          disablePictureInPicture
+          disableRemotePlayback
+          preload="auto"
+          poster="assets/img/hero-bg.jpg"
+          aria-label="Mockup do site institucional da WinPages exibido em um notebook, em um ambiente de trabalho moderno à noite."
         >
+          <source src="assets/video/hero.mp4" type="video/mp4">
+        </video>
       </div>
 
       <a href="#quick-nav" class="scroll-cue scroll-cue--hero reveal" aria-label="Rolar para ver mais conteúdo">
@@ -312,8 +319,16 @@
             </div>
             <svg class="service-row__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <div class="service-row reveal">
+          <div class="service-row service-row--featured reveal">
             <span class="service-row__number">05</span>
+            <div class="service-row__body">
+              <h3>Chatbots e Sistemas com IA <span class="service-row__tag">Novo</span></h3>
+              <p>Chatbots inteligentes para sites e sistemas completos, com painel de gerenciamento próprio.</p>
+            </div>
+            <svg class="service-row__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="service-row reveal">
+            <span class="service-row__number">06</span>
             <div class="service-row__body">
               <h3>Redesign de Sites</h3>
               <p>Modernização de sites antigos, com novo design e performance.</p>
@@ -321,7 +336,7 @@
             <svg class="service-row__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div class="service-row reveal">
-            <span class="service-row__number">06</span>
+            <span class="service-row__number">07</span>
             <div class="service-row__body">
               <h3>Manutenção e Evolução</h3>
               <p>Ajustes, atualizações e melhorias contínuas após o lançamento.</p>

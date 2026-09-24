@@ -33,6 +33,13 @@
     onScroll();
   }
 
+  // ---- Respect reduced-motion for the hero video ----
+  const heroVideo = document.querySelector('.hero__showcase-img');
+  if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.pause();
+  }
+
   // ---- Reveal on scroll ----
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {
